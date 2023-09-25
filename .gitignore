@@ -1,4 +1,4 @@
 /.vscode
 /build
-source/jeu/.vscode
-source/jeu/content/.ipynb_checkpoints
+/source/jeu/.vscode
+/source/jeu/content/.ipynb_checkpoints
