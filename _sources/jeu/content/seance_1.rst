@@ -75,18 +75,19 @@ L'objectif est de comprendre le repérage des éléments dans la fenêtre graphi
 
 L'objectif est de créer un déplacement d'un élément graphique tout en gérant sa position dans la fenêtre graphique.
 
-#. Créer une fenêtre graphique de largeu 200 sur une hauteur de 100 de titre "My first animation".
+#. Créer une fenêtre graphique de largeur 200 sur une hauteur de 100 de titre "My first animation".
 #. Dessiner un carré de côté 10, sur le bord gauche de la fenêtre à mi hauteur.
 #. Créer un déplacement de ce carré de la gauche vers la droite.
 #. Stopper le mouvement de ce carré lorsqu'il arrive sur le côté droit de la fenêtre.
 #. Créer un déplacement de ce carré de la droite vers la gauche.
 #. Créer un mouvement de va et vient sans que le carré ne sorte de la fenêtre.
+#. Créer un déplacement du carré tout autour de la fenêtre graphique sans déborder.
 
 .. rubric:: Interaction avec un élement
 
 L'objectif est d'apprendre à déplacer un élément dans la fenêtre graphique avec les touches de direction du clavier sans que l'élément ne sorte de la fenêtre graphique.
 
-#. Créer une fenêtre graphique de largeu 200 sur une hauteur de 100 de titre "My first interaction".
+#. Créer une fenêtre graphique de largeur 200 sur une hauteur de 100 de titre "My first interaction".
 #. Dessiner un carré de côté 10 placé au centre de la fenêtre.
 #. Créer un déplacement de ce carré de la gauche vers la droite lorsqu'on appuie sur la touche de direction **droite**.
 #. Créer un déplacement de ce carré vers les autres directions lorsqu'on appuie sur une touche de direction correspondante.
