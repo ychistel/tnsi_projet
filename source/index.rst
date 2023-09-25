@@ -1,10 +1,14 @@
-Structure de données linéaires
-==============================
+Projets en Python
+=================
+
+Un projet qui a pour objectifs:
+
+- Programmer en utilisant la programmation objectifs
+- Utiliser une interface graphique ``pyxel``
+- Créer un jeu pour 1 seul joueur
 
 .. toctree::
    :maxdepth: 1
-   :caption: Structure de données linéaires
+   :caption: Jeu avec interface graphique
    
-   pile/index.rst
-   file/index.rst
-   liste_chaine/index.rst
+   jeu/index.rst

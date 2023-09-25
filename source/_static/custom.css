@@ -25,6 +25,7 @@
 
 table.table{width:auto;}
 table.table td p, table.table th p{margin:auto 1em;text-align:center;}
+table.gauche tbody tr td p{text-align:left;}
 
 /*correctif pour bordure lien a lorsque largeur imposée*/
 a.border-none{border:none}
