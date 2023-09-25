@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Structure de données'
+project = 'Projet terminale NSI'
 copyright = '2022, yannick chistel'
 author = 'yannick chistel'
 
