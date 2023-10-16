@@ -139,6 +139,7 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Le module pyxel</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Séance 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="seance_2.html">Séance 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seance_3.html">Séance 3</a></li>
 </ul>
 </li>
 </ul>
@@ -419,7 +420,7 @@ Barre espace : <code class="docutils literal notranslate"><span class="pre">pyxe
 <p class="rubric">Animation d’un élément</p>
 <p>L’objectif est de créer un déplacement d’un élément graphique tout en gérant sa position dans la fenêtre graphique.</p>
 <ol class="arabic simple">
-<li><p>Créer une fenêtre graphique de largeur 200 sur une hauteur de 100 de titre « My first animation ».</p></li>
+<li><p>Créer une fenêtre graphique de largeur 128 sur une hauteur de 128 de titre « Première animation ».</p></li>
 <li><p>Dessiner un carré de côté 10, sur le bord gauche de la fenêtre à mi hauteur.</p></li>
 <li><p>Créer un déplacement de ce carré de la gauche vers la droite.</p></li>
 <li><p>Stopper le mouvement de ce carré lorsqu’il arrive sur le côté droit de la fenêtre.</p></li>
@@ -430,12 +431,20 @@ Barre espace : <code class="docutils literal notranslate"><span class="pre">pyxe
 <p class="rubric">Interaction avec un élement</p>
 <p>L’objectif est d’apprendre à déplacer un élément dans la fenêtre graphique avec les touches de direction du clavier sans que l’élément ne sorte de la fenêtre graphique.</p>
 <ol class="arabic simple">
-<li><p>Créer une fenêtre graphique de largeur 200 sur une hauteur de 100 de titre « My first interaction ».</p></li>
+<li><p>Créer une fenêtre graphique de largeur 128 sur une hauteur de 128 de titre « Première interaction ».</p></li>
 <li><p>Dessiner un carré de côté 10 placé au centre de la fenêtre.</p></li>
 <li><p>Créer un déplacement de ce carré de la gauche vers la droite lorsqu’on appuie sur la touche de direction <strong>droite</strong>.</p></li>
 <li><p>Créer un déplacement de ce carré vers les autres directions lorsqu’on appuie sur une touche de direction correspondante.</p></li>
 <li><p>Gérer le déplacement de votre carré pour qu’il ne sorte pas de la fenêtre.</p></li>
 </ol>
+<p class="rubric">Aller plus loin</p>
+<p>Si vous n’avez pas encore optimisé votre code:</p>
+<ul class="simple">
+<li><p>Remplacer les dimensions fixes de la fenêtre par 2 constantes <code class="docutils literal notranslate"><span class="pre">LARGEUR</span></code> et <code class="docutils literal notranslate"><span class="pre">HAUTEUR</span></code> déclarées en début de programme.</p></li>
+<li><p>Modifier le code en utilisant les constantes <code class="docutils literal notranslate"><span class="pre">LARGEUR</span></code> et <code class="docutils literal notranslate"><span class="pre">HAUTEUR</span></code>. Vérifiez que le code est toujours fonctionnel en modifiant les dimensions de ces constantes!</p></li>
+<li><p>Remplacer les dimensions du carré par une constante <code class="docutils literal notranslate"><span class="pre">COTE</span></code> déclarée en début de programme.</p></li>
+<li><p>Modifier le code en utilisant cette nouvelle constante. Vérifiez que tout est toujours fonctionnel en modifiant la valeur de la constante <code class="docutils literal notranslate"><span class="pre">COTE</span></code>.</p></li>
+</ul>
 </section>
 </section>
 

@@ -47,6 +47,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'jeu/content/seance_2';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
+    <link rel="next" title="Séance 3" href="seance_3.html" />
     <link rel="prev" title="Séance 1" href="seance_1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
@@ -138,6 +139,7 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Le module pyxel</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="seance_1.html">Séance 1</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Séance 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seance_3.html">Séance 3</a></li>
 </ul>
 </li>
 </ul>
@@ -263,7 +265,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -279,6 +283,17 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dessiner-la-balle">Dessiner la balle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-mouvement-de-la-balle">Le mouvement de la balle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-raquette-coulissante">La raquette coulissante</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rebond-de-la-balle-sur-la-raquette">Rebond de la balle sur la raquette</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -290,16 +305,72 @@ document.write(`
                   
   <section id="seance-2">
 <h1>Séance 2<a class="headerlink" href="#seance-2" title="Lien permanent vers cette rubrique">#</a></h1>
-<p>La <strong>nuit du code</strong> est un concours qui se déroule au mois de mai et qui a pour objectif de créer un jeu vidéo selon un thème imposé en 6 heures. L’interface graphique utilisée est le module <code class="docutils literal notranslate"><span class="pre">pyxel</span></code>. Il existe un site dédié à ce concours qui contient de nombreux tutoriels d’apprentissage.</p>
-<p>Pour apprendre l’utilisation de ce module, vous allez réaliser le jeu du serpent à travers un tutoriel. Le fichier est associé à vette activité. Au terme du tutoriel, vous allez apporter des modifications à votre programme pour en améliorer l’intérêt, le code et l’ergonomie.</p>
-<p>Par exemple:</p>
-<ol class="arabic simple">
-<li><p>Apporter un peu plus de difficuté au jeu, développer différents plateaux de jeu, etc.</p></li>
-<li><p>Transformer le code en programmation orientée objet.</p></li>
-<li><p>Apporter des commentaires et des tests pour le code.</p></li>
-<li><p>Guider le joueur en lui donnant des explications sur le jeu.</p></li>
+<p>Lors de cette séance, nous allons dessiner une balle de forme circulaire qui se déplace dans l’écran en rebondissant sur les bords de celui-ci tout en respectant les lois de la physique et plus particulièrement les angles de réfraction.</p>
+<p>La fenêtre a pour dimensions 128 pixels de côté et pour titre <strong>Trajectoire de balle</strong>.</p>
+<section id="dessiner-la-balle">
+<h2>Dessiner la balle<a class="headerlink" href="#dessiner-la-balle" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>On représente la balle par un cercle de rayon 4 positionnée en bas de l’écran au centre.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/balle_0.png"><img alt="../../_images/balle_0.png" src="../../_images/balle_0.png" style="width: 320px;" /></a>
+</figure>
+<p>L’instruction pour dessiner un cercle en <code class="docutils literal notranslate"><span class="pre">pyxel</span></code> est la suivante:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pyxel</span><span class="o">.</span><span class="n">circ</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">couleur</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Les paramètres sont:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code> sont les coordonnées du centre du cercle;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> est le rayon du cercle;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">couleur</span></code> est la couleur désignée par un entier compris entre 0 et 15 (inclus).</p></li>
+</ul>
+</section>
+<section id="le-mouvement-de-la-balle">
+<h2>Le mouvement de la balle<a class="headerlink" href="#le-mouvement-de-la-balle" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>On note <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code> les coordonnées du centre de la balle. On positionne la balle en haut de l’écran et au milieu de la largeur de la fenêtre soit aux coordonnées <code class="docutils literal notranslate"><span class="pre">(64,4)</span></code> (en tenant compte du rayon de la balle).</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/balle_1.png"><img alt="../../_images/balle_1.png" src="../../_images/balle_1.png" style="width: 320px;" /></a>
+</figure>
+<ol class="arabic">
+<li><p>On commence par déplacer la balle vers le bas et la droite de l’écran. Cela revient à augmenter les valeurs <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code> de 1.  Modifier la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> pour effectuer ce déplacement.</p></li>
+<li><p>Après un certain déplacement, la balle disparaît de l’écran. Il faut modifier son sens de déplacement lorsqu’elle arrive au bord de l’écran. Quelle modification faut-il apporter au code pour qu’elle change son déplacement ? Envisager les modifications selon le bord atteint par la balle.</p></li>
+<li><p>On utilise les variables <code class="docutils literal notranslate"><span class="pre">dx</span></code> et <code class="docutils literal notranslate"><span class="pre">dy</span></code> pour modifier le sens de déplacement. On donne l’extrait de code à compléter pour gérer les collisions de la balle avec les bords de la fenêtre de jeu.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/code_collision_bords.png"><img alt="../../_images/code_collision_bords.png" src="../../_images/code_collision_bords.png" style="width: 480px;" /></a>
+</figure>
+<p>Modifier le code de la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> pour que la balle reste dans la fenêtre de jeu.</p>
+</li>
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> devient peu lisible avec le code ajouté précédemment. Pour clarifier le code, on va extraire les collisions de la balle dans une fonction appelée <code class="docutils literal notranslate"><span class="pre">mouvement_balle()</span></code>. Cette fonction retournera les nouvelles coordonnées du centre de la balle. Donc on obtient le code suivant à compléter :</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/code_mouvement_balle.png"><img alt="../../_images/code_mouvement_balle.png" src="../../_images/code_mouvement_balle.png" style="width: 560px;" /></a>
+</figure>
+</li>
 </ol>
-<p>Document ressource : <a class="reference download internal" download="" href="../../_downloads/6ba04034b632a0a292ac95a49a5cb56d/Snake_Pyxel.pdf"><code class="xref download docutils literal notranslate"><span class="pre">../doc/Snake_Pyxel.pdf</span></code></a></p>
+</section>
+<section id="la-raquette-coulissante">
+<h2>La raquette coulissante<a class="headerlink" href="#la-raquette-coulissante" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>En bas de l’écran, on ajoute une raquette qui renvoie la balle lorsqu’elle arrive en bas de l’écran. Cette raquette est représentée par un rectangle de largeur 32 pixel et une hauteur de 4 pixel.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/balle_raquette.png"><img alt="../../_images/balle_raquette.png" src="../../_images/balle_raquette.png" style="width: 320px;" /></a>
+</figure>
+<ol class="arabic">
+<li><p>Ajouter à votre code, dans la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code>, la représentation de la raquette. Elle est positionnée en bas au centre de la fenêtre.</p></li>
+<li><p>La raquette se déplace à droite et à gauche avec les touches directionnelles. Ajouter à la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> les événements clavier pour gérer le déplacement de la raquette. On pourra utiliser une fonction <code class="docutils literal notranslate"><span class="pre">mouvement_raquette</span></code> pour recalculer la position de la raquette.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/code_mouvement_raquette.png"><img alt="../../_images/code_mouvement_raquette.png" src="../../_images/code_mouvement_raquette.png" style="width: 560px;" /></a>
+</figure>
+</li>
+</ol>
+</section>
+<section id="rebond-de-la-balle-sur-la-raquette">
+<h2>Rebond de la balle sur la raquette<a class="headerlink" href="#rebond-de-la-balle-sur-la-raquette" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>À présent que la raquette et la balle sont en mouvement, il faut gérer l’interaction entre les deux.</p>
+<ul class="simple">
+<li><p>si la balle touche la raquette, elle rebondit et repart vers le haut;</p></li>
+<li><p>si la balle ne touche pas la raquette, la partie s’arrête.</p></li>
+</ul>
+<p>Il faut gérer la collision entre la raquette et la balle.</p>
+<p><em>A suivre</em></p>
+</section>
 </section>
 
 
@@ -322,12 +393,38 @@ document.write(`
         <p class="prev-next-title">Séance 1</p>
       </div>
     </a>
+    <a class="right-next"
+       href="seance_3.html"
+       title="page suivante">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">suivant</p>
+        <p class="prev-next-title">Séance 3</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dessiner-la-balle">Dessiner la balle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-mouvement-de-la-balle">Le mouvement de la balle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-raquette-coulissante">La raquette coulissante</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rebond-de-la-balle-sur-la-raquette">Rebond de la balle sur la raquette</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

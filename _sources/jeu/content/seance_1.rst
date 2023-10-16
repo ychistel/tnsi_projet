@@ -75,7 +75,7 @@ L'objectif est de comprendre le repérage des éléments dans la fenêtre graphi
 
 L'objectif est de créer un déplacement d'un élément graphique tout en gérant sa position dans la fenêtre graphique.
 
-#. Créer une fenêtre graphique de largeur 200 sur une hauteur de 100 de titre "My first animation".
+#. Créer une fenêtre graphique de largeur 128 sur une hauteur de 128 de titre "Première animation".
 #. Dessiner un carré de côté 10, sur le bord gauche de la fenêtre à mi hauteur.
 #. Créer un déplacement de ce carré de la gauche vers la droite.
 #. Stopper le mouvement de ce carré lorsqu'il arrive sur le côté droit de la fenêtre.
@@ -87,8 +87,17 @@ L'objectif est de créer un déplacement d'un élément graphique tout en géran
 
 L'objectif est d'apprendre à déplacer un élément dans la fenêtre graphique avec les touches de direction du clavier sans que l'élément ne sorte de la fenêtre graphique.
 
-#. Créer une fenêtre graphique de largeur 200 sur une hauteur de 100 de titre "My first interaction".
+#. Créer une fenêtre graphique de largeur 128 sur une hauteur de 128 de titre "Première interaction".
 #. Dessiner un carré de côté 10 placé au centre de la fenêtre.
 #. Créer un déplacement de ce carré de la gauche vers la droite lorsqu'on appuie sur la touche de direction **droite**.
 #. Créer un déplacement de ce carré vers les autres directions lorsqu'on appuie sur une touche de direction correspondante.
 #. Gérer le déplacement de votre carré pour qu'il ne sorte pas de la fenêtre.
+
+.. rubric:: Aller plus loin
+
+Si vous n'avez pas encore optimisé votre code:
+
+- Remplacer les dimensions fixes de la fenêtre par 2 constantes ``LARGEUR`` et ``HAUTEUR`` déclarées en début de programme.
+- Modifier le code en utilisant les constantes ``LARGEUR`` et ``HAUTEUR``. Vérifiez que le code est toujours fonctionnel en modifiant les dimensions de ces constantes!
+- Remplacer les dimensions du carré par une constante ``COTE`` déclarée en début de programme.
+- Modifier le code en utilisant cette nouvelle constante. Vérifiez que tout est toujours fonctionnel en modifiant la valeur de la constante ``COTE``.
