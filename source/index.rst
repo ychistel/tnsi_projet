@@ -1,14 +1,15 @@
-Projets en Python
-=================
+Projet en Python
+================
 
 Un projet qui a pour objectifs:
 
-- Programmer en utilisant la programmation objectifs
-- Utiliser une interface graphique ``pyxel``
-- Créer un jeu pour 1 seul joueur
+- Programmer en utilisant la programmation objet ou la programmation impérative;
+- Utiliser le module ``pyxel`` pour créer une interface graphique; 
+- Créer et développer un jeu pour 1 seul joueur
 
 .. toctree::
    :maxdepth: 1
-   :caption: Jeu avec interface graphique
+   :hidden:
    
-   jeu/index.rst
+   module_pyxel/index.rst
+   jeu_casse_brique/index.rst

@@ -45,6 +45,15 @@ On note ``x`` et ``y`` les coordonnées du centre de la balle. On positionne la 
 
    Modifier le code de la fonction ``update`` pour que la balle reste dans la fenêtre de jeu.
 
+#. On peut optimiser le code de la fonction ``mouvement_balle``.
+
+   -  Les 4 tests peuvent se ramener à 2 tests.
+   -  Le changement de direction ``-1`` ou ``+1`` revient à opposer la valeur précédente, soit en ``-dx`` horizontalement ou ``-dy`` verticalement.
+
+   .. figure:: ../img/code_collision_optimise.png
+      :align: center
+      :width: 560
+
 #. La fonction ``update`` devient peu lisible avec le code ajouté précédemment. Pour clarifier le code, on va extraire les collisions de la balle dans une fonction appelée ``mouvement_balle()``. Cette fonction retournera les nouvelles coordonnées du centre de la balle. Donc on obtient le code suivant à compléter :
 
    .. figure:: ../img/code_mouvement_balle.png
