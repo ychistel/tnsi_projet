@@ -1,0 +1,465 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="fr" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>La balle &#8212; NSI</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../_static/translations.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'jeu_casse_brique/content/seance_2';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
+    <link rel="next" title="Rebond de la balle sur la raquette" href="seance_3.html" />
+    <link rel="prev" title="La raquette coulissante" href="seance_1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fr"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Passer au contenu principal</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">NSI</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../module_pyxel/index.html">Jeux avec interface graphique</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../module_pyxel/content/module_pyxel.html">Module Pyxel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../module_pyxel/content/entrainement.html">Entrainement sur Pyxel</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Le jeu du casse-briques</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="seance_1.html">La raquette coulissante</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">La balle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seance_3.html">Rebond de la balle sur la raquette</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Téléchargez cette page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/jeu_casse_brique/content/seance_2.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Télécharger le fichier source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimer au format PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Mode plein écran"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>La balle</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dessiner-la-balle">Dessiner la balle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-mouvement-de-la-balle">Le mouvement de la balle</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="la-balle">
+<h1>La balle<a class="headerlink" href="#la-balle" title="Lien permanent vers cette rubrique">#</a></h1>
+<p>Lors de cette séance, nous allons dessiner une balle de forme circulaire qui se déplace dans l’écran en rebondissant sur les bords de celui-ci.</p>
+<section id="dessiner-la-balle">
+<h2>Dessiner la balle<a class="headerlink" href="#dessiner-la-balle" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>On représente la balle par un cercle de rayon 4 positionnée en bas de l’écran au centre.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/balle_0.png"><img alt="../../_images/balle_0.png" src="../../_images/balle_0.png" style="width: 320px;" /></a>
+</figure>
+<p>L’instruction pour dessiner un cercle en <code class="docutils literal notranslate"><span class="pre">pyxel</span></code> est la suivante:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pyxel</span><span class="o">.</span><span class="n">circ</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">couleur</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Les paramètres sont:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code> sont les coordonnées du centre du cercle;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">r</span></code> est le rayon du cercle;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">couleur</span></code> est la couleur désignée par un entier compris entre 0 et 15 (inclus).</p></li>
+</ul>
+</section>
+<section id="le-mouvement-de-la-balle">
+<h2>Le mouvement de la balle<a class="headerlink" href="#le-mouvement-de-la-balle" title="Lien permanent vers cette rubrique">#</a></h2>
+<p>On note <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code> les coordonnées du centre de la balle. On positionne la balle en haut de l’écran et au milieu de la largeur de la fenêtre soit aux coordonnées <code class="docutils literal notranslate"><span class="pre">(64,4)</span></code> (en tenant compte du rayon de la balle).</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/balle_1.png"><img alt="../../_images/balle_1.png" src="../../_images/balle_1.png" style="width: 320px;" /></a>
+</figure>
+<ol class="arabic">
+<li><p>On commence par déplacer la balle vers le bas et la droite de l’écran. Cela revient à augmenter les valeurs <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code> de 1.  Modifier la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> pour effectuer ce déplacement.</p></li>
+<li><p>Après un certain déplacement, la balle disparaît de l’écran. Il faut modifier son sens de déplacement lorsqu’elle arrive au bord de l’écran. Quelle modification faut-il apporter au code pour qu’elle change son déplacement ? Envisager les modifications selon le bord atteint par la balle.</p></li>
+<li><p>On utilise les variables <code class="docutils literal notranslate"><span class="pre">dx</span></code> et <code class="docutils literal notranslate"><span class="pre">dy</span></code> pour modifier le sens de déplacement. On donne l’extrait de code à compléter pour gérer les collisions de la balle avec les bords de la fenêtre de jeu.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/code_collision_bords.png"><img alt="../../_images/code_collision_bords.png" src="../../_images/code_collision_bords.png" style="width: 480px;" /></a>
+</figure>
+<p>Modifier le code de la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> pour que la balle reste dans la fenêtre de jeu.</p>
+</li>
+<li><p>On peut optimiser le code de la fonction <code class="docutils literal notranslate"><span class="pre">mouvement_balle</span></code>.</p>
+<ul class="simple">
+<li><p>Les 4 tests peuvent se ramener à 2 tests.</p></li>
+<li><p>Le changement de direction <code class="docutils literal notranslate"><span class="pre">-1</span></code> ou <code class="docutils literal notranslate"><span class="pre">+1</span></code> revient à opposer la valeur précédente, soit en <code class="docutils literal notranslate"><span class="pre">-dx</span></code> horizontalement ou <code class="docutils literal notranslate"><span class="pre">-dy</span></code> verticalement.</p></li>
+</ul>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/code_collision_optimise.png"><img alt="../../_images/code_collision_optimise.png" src="../../_images/code_collision_optimise.png" style="width: 560px;" /></a>
+</figure>
+</li>
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> devient peu lisible avec le code ajouté précédemment. Pour clarifier le code, on va extraire les collisions de la balle dans une fonction appelée <code class="docutils literal notranslate"><span class="pre">mouvement_balle()</span></code>. Cette fonction retournera les nouvelles coordonnées du centre de la balle. Donc on obtient le code suivant à compléter :</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/code_mouvement_balle.png"><img alt="../../_images/code_mouvement_balle.png" src="../../_images/code_mouvement_balle.png" style="width: 560px;" /></a>
+</figure>
+</li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="seance_1.html"
+       title="page précédente">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">précédent</p>
+        <p class="prev-next-title">La raquette coulissante</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="seance_3.html"
+       title="page suivante">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">suivant</p>
+        <p class="prev-next-title">Rebond de la balle sur la raquette</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dessiner-la-balle">Dessiner la balle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#le-mouvement-de-la-balle">Le mouvement de la balle</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Par yannick chistel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, yannick chistel.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
