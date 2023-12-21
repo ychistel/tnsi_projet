@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="fr" data-content_root="" >
+<html lang="fr" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Séance 1 &#8212; NSI</title>
   
@@ -29,20 +28,20 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=33e45f9c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
   <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/documentation_options.js?v=72dce1d2"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/translations.js?v=d99ca74e"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'jeux/content/module_pyxel';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -132,7 +131,18 @@
     <p class="title logo__title">NSI</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Recherche</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../module_pyxel/index.html">Jeux avec interface graphique</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -144,6 +154,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../jeu_casse_brique/content/seance_1.html">La raquette coulissante</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../jeu_casse_brique/content/seance_2.html">La balle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../jeu_casse_brique/content/seance_3.html">Rebond de la balle sur la raquette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jeu_casse_brique/content/seance_4.html">Le mur de briques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jeu_casse_brique/content/seance_5.html">Animation du jeu</a></li>
 </ul>
 </li>
 </ul>
@@ -309,10 +321,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="seance-1">
-<h1>Séance 1<a class="headerlink" href="#seance-1" title="Lien permanent vers cette rubrique">#</a></h1>
+<h1>Séance 1<a class="headerlink" href="#seance-1" title="Link to this heading">#</a></h1>
 <p>Le module <code class="docutils literal notranslate"><span class="pre">pyxel</span></code> est un moteur de jeu « rétro » qui permet de créer des jeux vidéos avec une interface graphique. Ce module doit être importé : <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">pyxel</span></code>.</p>
 <section id="principe-general-d-un-jeu-video">
-<h2>Principe général d’un jeu vidéo<a class="headerlink" href="#principe-general-d-un-jeu-video" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Principe général d’un jeu vidéo<a class="headerlink" href="#principe-general-d-un-jeu-video" title="Link to this heading">#</a></h2>
 <p>Un programme de jeu avec fenêtre graphique se construit de la façon suivante:</p>
 <p>Une boucle infinie assure le déroulement du jeu. À chaque itération:</p>
 <ol class="arabic simple">
@@ -328,7 +340,7 @@ document.write(`
 </ul>
 </section>
 <section id="initialisation-de-l-interface-graphique">
-<h2>Initialisation de l’interface graphique<a class="headerlink" href="#initialisation-de-l-interface-graphique" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Initialisation de l’interface graphique<a class="headerlink" href="#initialisation-de-l-interface-graphique" title="Link to this heading">#</a></h2>
 <p>Le code minimal pour avoir la fenêtre graphique est le suivant:</p>
 <ol class="arabic simple">
 <li><p>En programmation impérative :</p></li>
@@ -336,7 +348,7 @@ document.write(`
 </ol>
 </section>
 <section id="methodes-de-pyxel">
-<h2>Méthodes de pyxel<a class="headerlink" href="#methodes-de-pyxel" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Méthodes de pyxel<a class="headerlink" href="#methodes-de-pyxel" title="Link to this heading">#</a></h2>
 <p>Il existe de nombreuses méthodes toutes faites permettant de dessiner, écrire du texte… Les couleurs sont désignées par des entiers de 0 à 15 (0 désignant le noir.)</p>
 <table class="gauche table">
 <thead>

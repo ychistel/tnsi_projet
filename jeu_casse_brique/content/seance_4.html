@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>La raquette coulissante &#8212; NSI</title>
+    <title>Le mur de briques &#8212; NSI</title>
   
   
   
@@ -43,11 +43,11 @@
     <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script src="../../_static/translations.js?v=d99ca74e"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'jeu_casse_brique/content/seance_1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'jeu_casse_brique/content/seance_4';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
-    <link rel="next" title="La balle" href="seance_2.html" />
-    <link rel="prev" title="Le jeu du casse-briques" href="../index.html" />
+    <link rel="next" title="Animation du jeu" href="seance_5.html" />
+    <link rel="prev" title="Rebond de la balle sur la raquette" href="seance_3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -153,10 +153,10 @@
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Le jeu du casse-briques</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">La raquette coulissante</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seance_1.html">La raquette coulissante</a></li>
 <li class="toctree-l2"><a class="reference internal" href="seance_2.html">La balle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="seance_3.html">Rebond de la balle sur la raquette</a></li>
-<li class="toctree-l2"><a class="reference internal" href="seance_4.html">Le mur de briques</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Le mur de briques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="seance_5.html">Animation du jeu</a></li>
 </ul>
 </li>
@@ -214,7 +214,7 @@
       
       
       
-      <li><a href="../../_sources/jeu_casse_brique/content/seance_1.rst" target="_blank"
+      <li><a href="../../_sources/jeu_casse_brique/content/seance_4.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Télécharger le fichier source"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +296,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>La raquette coulissante</h1>
+    <h1>Le mur de briques</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -310,26 +310,50 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="la-raquette-coulissante">
-<h1>La raquette coulissante<a class="headerlink" href="#la-raquette-coulissante" title="Link to this heading">#</a></h1>
-<p>La raquette est positionnée en bas de l’écran. Elle est dirigée avec les touches de direction du clavier (droite, gauche). Bien sûr, elle ne sort pas de la fenêtre.</p>
-<p class="rubric">Descriptif de la raquette</p>
-<ul class="simple">
-<li><p>Elle mesure 32 pixel de long sur une hauteur de 4 pixel.</p></li>
-<li><p>Elle se déplace de 5 pixel à chaque appui sur une touche de direction gauche ou droite.</p></li>
-<li><p>Elle se bloque sur les bords droit et gauche de l’écran.</p></li>
-</ul>
+  <section id="le-mur-de-briques">
+<h1>Le mur de briques<a class="headerlink" href="#le-mur-de-briques" title="Link to this heading">#</a></h1>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/balle_raquette.png"><img alt="../../_images/balle_raquette.png" src="../../_images/balle_raquette.png" style="width: 320px;" /></a>
+<a class="reference internal image-reference" href="../../_images/mur_briques.png"><img alt="../../_images/mur_briques.png" src="../../_images/mur_briques.png" style="width: 400px;" /></a>
 </figure>
-<ol class="arabic">
-<li><p>Ajouter à votre code, dans la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code>, la représentation de la raquette. Elle est positionnée en bas au centre de la fenêtre.</p></li>
-<li><p>La raquette se déplace à droite et à gauche avec les touches directionnelles. Ajouter à la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> les événements clavier pour gérer le déplacement de la raquette. On pourra utiliser une fonction <code class="docutils literal notranslate"><span class="pre">mouvement_raquette</span></code> pour recalculer la position de la raquette.</p>
+<p>Le mur de briques est représenté par des rectangles de couleur rouge comme le montre la figure ci-dessus.
+Ce mur est défini par un tableau contenant des briques de longueur 19 et de hauteur 4.</p>
+<p>On définit les variables suivantes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">espace_mur</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">longueur_brique</span> <span class="o">=</span> <span class="mi">19</span>
+<span class="n">hauteur_brique</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">hauteur_mur</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">mur_brique</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">5</span><span class="p">,</span><span class="mi">20</span><span class="p">),(</span><span class="mi">25</span><span class="p">,</span><span class="mi">20</span><span class="p">),(</span><span class="mi">45</span><span class="p">,</span><span class="mi">20</span><span class="p">),(</span><span class="mi">65</span><span class="p">,</span><span class="mi">20</span><span class="p">),(</span><span class="mi">85</span><span class="p">,</span><span class="mi">20</span><span class="p">),(</span><span class="mi">105</span><span class="p">,</span><span class="mi">20</span><span class="p">),</span> <span class="c1"># ligne 1</span>
+              <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">25</span><span class="p">),(</span><span class="mi">25</span><span class="p">,</span><span class="mi">25</span><span class="p">),(</span><span class="mi">45</span><span class="p">,</span><span class="mi">25</span><span class="p">),(</span><span class="mi">65</span><span class="p">,</span><span class="mi">25</span><span class="p">),(</span><span class="mi">85</span><span class="p">,</span><span class="mi">25</span><span class="p">),(</span><span class="mi">105</span><span class="p">,</span><span class="mi">25</span><span class="p">),</span> <span class="c1"># ligne 2</span>
+              <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">30</span><span class="p">),(</span><span class="mi">25</span><span class="p">,</span><span class="mi">30</span><span class="p">),(</span><span class="mi">45</span><span class="p">,</span><span class="mi">30</span><span class="p">),(</span><span class="mi">65</span><span class="p">,</span><span class="mi">30</span><span class="p">),(</span><span class="mi">85</span><span class="p">,</span><span class="mi">30</span><span class="p">),(</span><span class="mi">105</span><span class="p">,</span><span class="mi">30</span><span class="p">),</span> <span class="c1"># ligne 3</span>
+              <span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">35</span><span class="p">),(</span><span class="mi">25</span><span class="p">,</span><span class="mi">35</span><span class="p">),(</span><span class="mi">45</span><span class="p">,</span><span class="mi">35</span><span class="p">),(</span><span class="mi">65</span><span class="p">,</span><span class="mi">35</span><span class="p">),(</span><span class="mi">85</span><span class="p">,</span><span class="mi">35</span><span class="p">),(</span><span class="mi">105</span><span class="p">,</span><span class="mi">35</span><span class="p">)]</span> <span class="c1"># ligne 4</span>
+</pre></div>
+</div>
+<p>Chaque tuple dans le tableau <code class="docutils literal notranslate"><span class="pre">mur_brique</span></code> définit une brique en indiquant les coordonnées du sommet haut et gauche de la brique.</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/code_mouvement_raquette.png"><img alt="../../_images/code_mouvement_raquette.png" src="../../_images/code_mouvement_raquette.png" style="width: 560px;" /></a>
+<a class="reference internal image-reference" href="../../_images/mur_briques_2.svg"><img alt="../../_images/mur_briques_2.svg" src="../../_images/mur_briques_2.svg" width="400" /></a>
 </figure>
-</li>
+<p class="rubric">Dessiner le mur de briques</p>
+<p>Le mur de briques est dessiné avec la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code> de Pyxel. Chaque brique est représenté par un rectangle de couleur rouge.</p>
+<p>L’instruction du module Pyxel qui représente un rectangle est rapelée ci-dessous:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pyxel</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">x_sommet</span><span class="p">,</span> <span class="n">y_sommet</span><span class="p">,</span> <span class="n">largeur_rectangle</span><span class="p">,</span> <span class="n">hauteur_rectangle</span><span class="p">,</span> <span class="n">couleur</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>On doit représenter toutes les briques du mur. Cela implique d’effectuer une boucle sur le tableau <code class="docutils literal notranslate"><span class="pre">mur_briques</span></code>.</p>
+<p class="rubric">Casser des briques</p>
+<p>Pour casser des briques, il faut gérer la collision entre la balle et les briques du mur. Cela implique plusieurs actions:</p>
+<ol class="arabic simple">
+<li><p>Il faut tester après chaque mouvement de la balle si elle est en contact avec une brique, donc si les coordonnées du centre de la balle sont comprises dans l’espace délimité d’une brique.</p></li>
+<li><p>De plus, lorsque la balle casse une brique, il faut supprimer celle-ci du tableau <code class="docutils literal notranslate"><span class="pre">mur_brique</span></code>. Sa suppression entraîne qu’elle n’est plus dessinée et permet à la balle d’atteindre les autres briques.</p></li>
+<li><p>Enfin, après le contact, la balle change de direction.</p></li>
 </ol>
+<p>On définit la fonction <code class="docutils literal notranslate"><span class="pre">casse_briques</span></code> qui réalise les trois actions ci-dessus:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">casse_briques</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">dx</span><span class="p">,</span><span class="n">dy</span><span class="p">,</span><span class="n">longueur_brique</span><span class="p">,</span><span class="n">hauteur_brique</span>
+
+    <span class="k">for</span> <span class="n">brique</span> <span class="ow">in</span> <span class="n">mur_brique</span><span class="p">:</span>
+        <span class="k">pass</span>
+</pre></div>
+</div>
 </section>
 
 
@@ -344,20 +368,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../index.html"
+       href="seance_3.html"
        title="page précédente">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Le jeu du casse-briques</p>
+        <p class="prev-next-title">Rebond de la balle sur la raquette</p>
       </div>
     </a>
     <a class="right-next"
-       href="seance_2.html"
+       href="seance_5.html"
        title="page suivante">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">La balle</p>
+        <p class="prev-next-title">Animation du jeu</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -6,7 +6,7 @@ La raquette est positionnée en bas de l'écran. Elle est dirigée avec les touc
 .. rubric:: Descriptif de la raquette
 
 -  Elle mesure 32 pixel de long sur une hauteur de 4 pixel.
--  Elle se déplace de 4 pixel à chaque appui sur une touche de direction.
+-  Elle se déplace de 5 pixel à chaque appui sur une touche de direction gauche ou droite.
 -  Elle se bloque sur les bords droit et gauche de l'écran.
 
 .. figure:: ../img/balle_raquette.png
@@ -19,3 +19,4 @@ La raquette est positionnée en bas de l'écran. Elle est dirigée avec les touc
    .. figure:: ../img/code_mouvement_raquette.png
       :align: center
       :width: 560
+

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="fr" data-content_root="" >
+<html lang="fr" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Jeux avec interface graphique &#8212; NSI</title>
   
@@ -29,20 +28,20 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=33e45f9c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
   <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../_static/translations.js"></script>
+    <script src="../_static/documentation_options.js?v=72dce1d2"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/translations.js?v=d99ca74e"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'module_pyxel/index';</script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -134,7 +133,18 @@
     <p class="title logo__title">NSI</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Recherche</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Jeux avec interface graphique</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -146,6 +156,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../jeu_casse_brique/content/seance_1.html">La raquette coulissante</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../jeu_casse_brique/content/seance_2.html">La balle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../jeu_casse_brique/content/seance_3.html">Rebond de la balle sur la raquette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jeu_casse_brique/content/seance_4.html">Le mur de briques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jeu_casse_brique/content/seance_5.html">Animation du jeu</a></li>
 </ul>
 </li>
 </ul>
@@ -299,7 +311,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="jeux-avec-interface-graphique">
-<h1>Jeux avec interface graphique<a class="headerlink" href="#jeux-avec-interface-graphique" title="Lien permanent vers cette rubrique">#</a></h1>
+<h1>Jeux avec interface graphique<a class="headerlink" href="#jeux-avec-interface-graphique" title="Link to this heading">#</a></h1>
 <p>La création d’un jeu avec une interface graphique est souvent un objectif pour les développeurs. C’est souvent se lancer dans un code long, difficile et dont il faut gérer les bugs. Il existe en Python de nombreux modules qui permettent d’utiliser une interface graphique comme <code class="docutils literal notranslate"><span class="pre">Tkinter</span></code>, <code class="docutils literal notranslate"><span class="pre">Pygame</span></code>, <code class="docutils literal notranslate"><span class="pre">Qt</span></code> ou <code class="docutils literal notranslate"><span class="pre">Arcade</span></code>. Dans les projets de jeux que nous allons développer, on utilisera le module <code class="docutils literal notranslate"><span class="pre">Pyxel</span></code>.</p>
 <p>Ce module permet de créer des jeux rétros. Son principal avantage est sa simplicité d’utilisation. Pour démarrer, il me semble adapté aux jeux développés et sa prise en main est aisée. De plus, vous trouverez de la documentation et des tutoriels sur le site du jeu concours <a href="#id1"><span class="problematic" id="id2">**</span></a>La nuit du code``.</p>
 <div class="toctree-wrapper compound">

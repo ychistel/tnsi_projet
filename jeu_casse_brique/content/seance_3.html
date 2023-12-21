@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="fr" data-content_root="" >
+<html lang="fr" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Rebond de la balle sur la raquette &#8212; NSI</title>
   
@@ -29,24 +28,25 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=33e45f9c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
   <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/documentation_options.js?v=72dce1d2"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/translations.js?v=d99ca74e"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'jeu_casse_brique/content/seance_3';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
+    <link rel="next" title="Le mur de briques" href="seance_4.html" />
     <link rel="prev" title="La balle" href="seance_2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
@@ -133,7 +133,18 @@
     <p class="title logo__title">NSI</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Recherche</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../module_pyxel/index.html">Jeux avec interface graphique</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -145,6 +156,8 @@
 <li class="toctree-l2"><a class="reference internal" href="seance_1.html">La raquette coulissante</a></li>
 <li class="toctree-l2"><a class="reference internal" href="seance_2.html">La balle</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Rebond de la balle sur la raquette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seance_4.html">Le mur de briques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seance_5.html">Animation du jeu</a></li>
 </ul>
 </li>
 </ul>
@@ -298,14 +311,40 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="rebond-de-la-balle-sur-la-raquette">
-<h1>Rebond de la balle sur la raquette<a class="headerlink" href="#rebond-de-la-balle-sur-la-raquette" title="Lien permanent vers cette rubrique">#</a></h1>
+<h1>Rebond de la balle sur la raquette<a class="headerlink" href="#rebond-de-la-balle-sur-la-raquette" title="Link to this heading">#</a></h1>
 <p>À présent que la raquette et la balle sont en mouvement, il faut gérer l’interaction entre les deux.</p>
 <ul class="simple">
 <li><p>si la balle touche la raquette, elle rebondit et repart vers le haut;</p></li>
 <li><p>si la balle ne touche pas la raquette, la partie s’arrête.</p></li>
 </ul>
-<p>Il faut gérer la collision entre la raquette et la balle.</p>
-<p><em>A suivre</em></p>
+<p>Il faut gérer la <strong>collision</strong> entre la raquette et la balle. La figure ci-dessous redonne les paramètres et variables du contexte.</p>
+<ul class="simple">
+<li><p>La position du centre de la balle est repéré par les variables <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p></li>
+<li><p>La position de la raquette est répérée par la variable <code class="docutils literal notranslate"><span class="pre">pos</span></code>; son ordonnée est fixe puisqu’elle reste collée au sol et a pour valeur <code class="docutils literal notranslate"><span class="pre">hauteur_fenetre</span> <span class="pre">-</span> <span class="pre">hauteur_raquette</span></code>.</p></li>
+<li><p>La raquette a une longueur définie par la variable <code class="docutils literal notranslate"><span class="pre">long</span></code>.</p></li>
+</ul>
+<p>La balle est en contact avec la raquette lorsque les coordonnées de son centre vérifient:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> compris entre <code class="docutils literal notranslate"><span class="pre">pos</span></code> et <code class="docutils literal notranslate"><span class="pre">pos</span> <span class="pre">+</span> <span class="pre">long</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">y</span></code> est égal à <code class="docutils literal notranslate"><span class="pre">hauteur_fenetre</span> <span class="pre">-</span> <span class="pre">hauteur_raquette</span></code> (on ne tient pas compte du rayon de la balle ici)</p></li>
+</ul>
+<p>La figure ci-dessous illustre les positions de la balle et de la raquette:</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/collision_balle_raquette_1.svg"><img alt="../../_images/collision_balle_raquette_1.svg" src="../../_images/collision_balle_raquette_1.svg" width="400" /></a>
+</figure>
+<p>On crée une fonction <code class="docutils literal notranslate"><span class="pre">frappe_balle()</span></code> qui renvoie les coordonnées de la balle après contact avec la raquette. Cette fonction change la direction de la balle lorsque celle-ci entre en contact avec la raquette.</p>
+<p>Le mouvement de la balle est modifié uniquement sur l’ordonnée <code class="docutils literal notranslate"><span class="pre">y</span></code>. Cela revient donc à inverser le déplacement <code class="docutils literal notranslate"><span class="pre">dy</span></code> qui change de signe. La fonction est donc la suivante :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">frappe_balle</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">dx</span><span class="p">,</span><span class="n">dy</span><span class="p">,</span><span class="n">pos</span>
+
+    <span class="k">if</span> <span class="n">pos</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="n">pos</span> <span class="o">+</span> <span class="n">long</span><span class="p">:</span>
+        <span class="n">dy</span> <span class="o">=</span> <span class="o">-</span><span class="n">dy</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">dx</span><span class="p">,</span><span class="n">y</span><span class="o">+</span><span class="n">dy</span>
+</pre></div>
+</div>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">frappe_balle()</span></code> est appelée dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code>. Elle doit être exécutée lorsque la balle s’approche de la raquette, c’est-à-dire lorsque l’ordonnée de la balle est proche de la hauteur de la raquette.</p>
+<p>On testera également si la balle touche le sol, ce qui entraine la fin de la partie.</p>
+<p>Modifier le code de la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> et vérifier que la balle est bien renvoyée par la raquette lorsqu’elles se touchent et aussi que la partie se termine quand la balle touche le sol.</p>
 </section>
 
 
@@ -327,6 +366,15 @@ document.write(`
         <p class="prev-next-subtitle">précédent</p>
         <p class="prev-next-title">La balle</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="seance_4.html"
+       title="page suivante">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">suivant</p>
+        <p class="prev-next-title">Le mur de briques</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="fr" data-content_root="" >
+<html lang="fr" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Séance 2 &#8212; NSI</title>
   
@@ -29,20 +28,20 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=33e45f9c" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
   <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
-    <script src="../../_static/translations.js"></script>
+    <script src="../../_static/documentation_options.js?v=72dce1d2"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/translations.js?v=d99ca74e"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'jeu_glouton/content/seance_2';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -132,7 +131,18 @@
     <p class="title logo__title">NSI</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Recherche</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../module_pyxel/index.html">Jeux avec interface graphique</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -144,6 +154,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../jeu_casse_brique/content/seance_1.html">La raquette coulissante</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../jeu_casse_brique/content/seance_2.html">La balle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../jeu_casse_brique/content/seance_3.html">Rebond de la balle sur la raquette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jeu_casse_brique/content/seance_4.html">Le mur de briques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jeu_casse_brique/content/seance_5.html">Animation du jeu</a></li>
 </ul>
 </li>
 </ul>
@@ -310,11 +322,11 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section id="seance-2">
-<h1>Séance 2<a class="headerlink" href="#seance-2" title="Lien permanent vers cette rubrique">#</a></h1>
+<h1>Séance 2<a class="headerlink" href="#seance-2" title="Link to this heading">#</a></h1>
 <p>Lors de cette séance, nous allons dessiner une balle de forme circulaire qui se déplace dans l’écran en rebondissant sur les bords de celui-ci tout en respectant les lois de la physique et plus particulièrement les angles de réfraction.</p>
 <p>La fenêtre a pour dimensions 128 pixels de côté et pour titre <strong>Trajectoire de balle</strong>.</p>
 <section id="dessiner-la-balle">
-<h2>Dessiner la balle<a class="headerlink" href="#dessiner-la-balle" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Dessiner la balle<a class="headerlink" href="#dessiner-la-balle" title="Link to this heading">#</a></h2>
 <p>On représente la balle par un cercle de rayon 4 positionnée en bas de l’écran au centre.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/balle_01.png"><img alt="../../_images/balle_01.png" src="../../_images/balle_01.png" style="width: 320px;" /></a>
@@ -331,7 +343,7 @@ document.write(`
 </ul>
 </section>
 <section id="le-mouvement-de-la-balle">
-<h2>Le mouvement de la balle<a class="headerlink" href="#le-mouvement-de-la-balle" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Le mouvement de la balle<a class="headerlink" href="#le-mouvement-de-la-balle" title="Link to this heading">#</a></h2>
 <p>On note <code class="docutils literal notranslate"><span class="pre">x</span></code> et <code class="docutils literal notranslate"><span class="pre">y</span></code> les coordonnées du centre de la balle. On positionne la balle en haut de l’écran et au milieu de la largeur de la fenêtre soit aux coordonnées <code class="docutils literal notranslate"><span class="pre">(64,4)</span></code> (en tenant compte du rayon de la balle).</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/balle_11.png"><img alt="../../_images/balle_11.png" src="../../_images/balle_11.png" style="width: 320px;" /></a>
@@ -362,7 +374,7 @@ document.write(`
 </ol>
 </section>
 <section id="la-raquette-coulissante">
-<h2>La raquette coulissante<a class="headerlink" href="#la-raquette-coulissante" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>La raquette coulissante<a class="headerlink" href="#la-raquette-coulissante" title="Link to this heading">#</a></h2>
 <p>En bas de l’écran, on ajoute une raquette qui renvoie la balle lorsqu’elle arrive en bas de l’écran. Cette raquette est représentée par un rectangle de largeur 32 pixel et une hauteur de 4 pixel.</p>
 <figure class="align-center">
 <a class="reference internal image-reference" href="../../_images/balle_raquette1.png"><img alt="../../_images/balle_raquette1.png" src="../../_images/balle_raquette1.png" style="width: 320px;" /></a>
@@ -377,7 +389,7 @@ document.write(`
 </ol>
 </section>
 <section id="rebond-de-la-balle-sur-la-raquette">
-<h2>Rebond de la balle sur la raquette<a class="headerlink" href="#rebond-de-la-balle-sur-la-raquette" title="Lien permanent vers cette rubrique">#</a></h2>
+<h2>Rebond de la balle sur la raquette<a class="headerlink" href="#rebond-de-la-balle-sur-la-raquette" title="Link to this heading">#</a></h2>
 <p>À présent que la raquette et la balle sont en mouvement, il faut gérer l’interaction entre les deux.</p>
 <ul class="simple">
 <li><p>si la balle touche la raquette, elle rebondit et repart vers le haut;</p></li>

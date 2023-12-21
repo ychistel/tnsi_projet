@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>La raquette coulissante &#8212; NSI</title>
+    <title>Animation du jeu &#8212; NSI</title>
   
   
   
@@ -43,11 +43,10 @@
     <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script src="../../_static/translations.js?v=d99ca74e"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'jeu_casse_brique/content/seance_1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'jeu_casse_brique/content/seance_5';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
-    <link rel="next" title="La balle" href="seance_2.html" />
-    <link rel="prev" title="Le jeu du casse-briques" href="../index.html" />
+    <link rel="prev" title="Le mur de briques" href="seance_4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="fr"/>
   </head>
@@ -153,11 +152,11 @@
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Le jeu du casse-briques</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">La raquette coulissante</a></li>
+<li class="toctree-l2"><a class="reference internal" href="seance_1.html">La raquette coulissante</a></li>
 <li class="toctree-l2"><a class="reference internal" href="seance_2.html">La balle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="seance_3.html">Rebond de la balle sur la raquette</a></li>
 <li class="toctree-l2"><a class="reference internal" href="seance_4.html">Le mur de briques</a></li>
-<li class="toctree-l2"><a class="reference internal" href="seance_5.html">Animation du jeu</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Animation du jeu</a></li>
 </ul>
 </li>
 </ul>
@@ -214,7 +213,7 @@
       
       
       
-      <li><a href="../../_sources/jeu_casse_brique/content/seance_1.rst" target="_blank"
+      <li><a href="../../_sources/jeu_casse_brique/content/seance_5.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Télécharger le fichier source"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +295,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>La raquette coulissante</h1>
+    <h1>Animation du jeu</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -310,24 +309,75 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="la-raquette-coulissante">
-<h1>La raquette coulissante<a class="headerlink" href="#la-raquette-coulissante" title="Link to this heading">#</a></h1>
-<p>La raquette est positionnée en bas de l’écran. Elle est dirigée avec les touches de direction du clavier (droite, gauche). Bien sûr, elle ne sort pas de la fenêtre.</p>
-<p class="rubric">Descriptif de la raquette</p>
+  <section id="animation-du-jeu">
+<h1>Animation du jeu<a class="headerlink" href="#animation-du-jeu" title="Link to this heading">#</a></h1>
+<p>Maintenant que tous les éléments du jeu sont créés, il reste à écrire les actions dans la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> du module Pyxel.</p>
+<p class="rubric">Fonction update()</p>
+<p>On rappelle les actions à exécuter:</p>
+<ol class="arabic simple">
+<li><p>Déplacement de la balle;</p></li>
+<li><p>Déplacement de la raquette;</p></li>
+<li><p>Collision entre la balle et la raquette;</p></li>
+<li><p>Collision entre la balle et les briques;</p></li>
+<li><p>Collision entre la balle et le bas de la fenêtre provoquant l’arrêt du jeu.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> doit utiliser des variables globales pour être accessibles par les autres fonctions du programme.</p>
+</div>
+<p>On obtient le code initial de la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">dx</span><span class="p">,</span><span class="n">dy</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">game_over</span>
+
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p class="rubric">Modifier le début du jeu</p>
+<p>En l’état, la balle part du centre de la raquette, elle-même positionnée au centre de l’écran. Cela signifie que toutes les parties sont identiques !</p>
+<p>Pour éviter cela, on peut modifier l’emplacement de la balle au début du jeu.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../../_images/debut_jeu_deplace.png"><img alt="../../_images/debut_jeu_deplace.png" src="../../_images/debut_jeu_deplace.png" style="width: 400px;" /></a>
+</figure>
+<p>Pour cela, on modifie le code de la fonction update. On ajoute une variable booléenne <code class="docutils literal notranslate"><span class="pre">game_on</span></code> initialisée à <code class="docutils literal notranslate"><span class="pre">False</span></code>. On a donc 2 possibilités:</p>
 <ul class="simple">
-<li><p>Elle mesure 32 pixel de long sur une hauteur de 4 pixel.</p></li>
-<li><p>Elle se déplace de 5 pixel à chaque appui sur une touche de direction gauche ou droite.</p></li>
-<li><p>Elle se bloque sur les bords droit et gauche de l’écran.</p></li>
+<li><p>La variable passe à <code class="docutils literal notranslate"><span class="pre">True</span></code> et alors le code de jeu s’exécute.</p></li>
+<li><p>La variable est à <code class="docutils literal notranslate"><span class="pre">False</span></code> et alors on peut déplacer la raquette avec la balle au centre.</p></li>
 </ul>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/balle_raquette.png"><img alt="../../_images/balle_raquette.png" src="../../_images/balle_raquette.png" style="width: 320px;" /></a>
-</figure>
-<ol class="arabic">
-<li><p>Ajouter à votre code, dans la fonction <code class="docutils literal notranslate"><span class="pre">draw</span></code>, la représentation de la raquette. Elle est positionnée en bas au centre de la fenêtre.</p></li>
-<li><p>La raquette se déplace à droite et à gauche avec les touches directionnelles. Ajouter à la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> les événements clavier pour gérer le déplacement de la raquette. On pourra utiliser une fonction <code class="docutils literal notranslate"><span class="pre">mouvement_raquette</span></code> pour recalculer la position de la raquette.</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../../_images/code_mouvement_raquette.png"><img alt="../../_images/code_mouvement_raquette.png" src="../../_images/code_mouvement_raquette.png" style="width: 560px;" /></a>
-</figure>
+<p>Lorsque la raquette est à l’endroit souhaité pour débuter le jeu, une pression sur la touche <strong>ESPACE</strong> du cavier passe la variable <code class="docutils literal notranslate"><span class="pre">game_on</span></code> à <code class="docutils literal notranslate"><span class="pre">True</span></code> et le jeu démarre.</p>
+<p>Le code à ajouter à la fonction <code class="docutils literal notranslate"><span class="pre">update</span></code> est le suivant:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mouvement_raquette</span><span class="p">()</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">pos</span> <span class="o">+</span> <span class="n">long</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">pyxel</span><span class="o">.</span><span class="n">btn</span><span class="p">(</span><span class="n">pyxel</span><span class="o">.</span><span class="n">KEY_SPACE</span><span class="p">):</span>
+    <span class="n">game_on</span> <span class="o">=</span> <span class="kc">True</span>
+</pre></div>
+</div>
+<p class="rubric">Un gagnant à la fin</p>
+<p>Actuellement, notre code ne déclare aucun gagnant lorsqu’on a cassé toutes les briques du mur. Pour cela, il suffit de vérifier si le mur de briques est vide.</p>
+<ul class="simple">
+<li><p>Si la variable <code class="docutils literal notranslate"><span class="pre">mur_brique</span></code> est un tableau vide, alors la partie est gagnée et le jeu s’arête.</p></li>
+<li><p>Sinon, la partie continue.</p></li>
+</ul>
+<p>On peut modifier la fonction <code class="docutils literal notranslate"><span class="pre">casse_brique</span></code> qui vérifie si le mur de briques est vide. Avant, on crée une variable booléenne <code class="docutils literal notranslate"><span class="pre">winner</span></code> initialisée à <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<ul class="simple">
+<li><p>Si la variable <code class="docutils literal notranslate"><span class="pre">mur_brique</span></code> est un tableau vide, alors la variable <code class="docutils literal notranslate"><span class="pre">winner</span></code> prend la valeur <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p>Sinon, la variable <code class="docutils literal notranslate"><span class="pre">winner</span></code> n’est pas changée et reste à <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+</ul>
+<p>Ensuite, si la valeur de la variable <code class="docutils literal notranslate"><span class="pre">winner</span></code> est <code class="docutils literal notranslate"><span class="pre">True</span></code>, on affiche que la partie est gagnée.</p>
+<p class="rubric">Autres améliorations</p>
+<p>Différentes pistes d’amélioration du jeu sont possibles.</p>
+<ol class="arabic simple">
+<li><p>Modifier le mur de briques:</p>
+<ul class="simple">
+<li><p>Augmenter le nombre de briques par ligne</p></li>
+<li><p>Augmenter le nombre de lignes de briques</p></li>
+<li><p>Avoir une brique spéciale qui accélère la vitesse de la balle</p></li>
+</ul>
+</li>
+<li><p>Modifier le mouvement de la balle</p>
+<ul class="simple">
+<li><p>Accélérer la balle dans certaines conditions</p></li>
+<li><p>Modifier la trajectoire de la balle selon l’impact avec la raquette.</p></li>
+</ul>
 </li>
 </ol>
 </section>
@@ -344,22 +394,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../index.html"
+       href="seance_4.html"
        title="page précédente">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">précédent</p>
-        <p class="prev-next-title">Le jeu du casse-briques</p>
+        <p class="prev-next-title">Le mur de briques</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="seance_2.html"
-       title="page suivante">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">La balle</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

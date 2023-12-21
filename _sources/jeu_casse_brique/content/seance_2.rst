@@ -3,8 +3,7 @@ La balle
 
 Lors de cette séance, nous allons dessiner une balle de forme circulaire qui se déplace dans l'écran en rebondissant sur les bords de celui-ci.
 
-Dessiner la balle
------------------
+.. rubric:: Représenter la balle
 
 On représente la balle par un cercle de rayon 4 positionnée en bas de l'écran au centre.
 
@@ -24,8 +23,7 @@ Les paramètres sont:
 -  ``r`` est le rayon du cercle;
 -  ``couleur`` est la couleur désignée par un entier compris entre 0 et 15 (inclus).
 
-Le mouvement de la balle
-------------------------
+.. rubric:: Mouvement de la balle
 
 On note ``x`` et ``y`` les coordonnées du centre de la balle. On positionne la balle en haut de l'écran et au milieu de la largeur de la fenêtre soit aux coordonnées ``(64,4)`` (en tenant compte du rayon de la balle).
 
