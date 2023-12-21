@@ -9,6 +9,8 @@ Le jeu du casse-briques
    content/seance_1.rst
    content/seance_2.rst
    content/seance_3.rst
+   content/seance_4.rst
+   content/seance_5.rst
 
 Le jeu du casse briques est un jeu rétro dont l'objectif est de casser un mur de briques situé en haut de l'écran avec une balle rebondissant sur une raquette qui se déplace horizontalement en bas de l'écran.
 
